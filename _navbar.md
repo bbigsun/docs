@@ -1,4 +1,7 @@
 <!-- _navbar.md -->
 
-* [En](/)
-* [中文](/zh-cn/)
+* [首页](/)
+* Study
+  * [Kubernetes](/k8s/)
+  * [Ansible](/ansible/)
+  * [Python](/python/)
