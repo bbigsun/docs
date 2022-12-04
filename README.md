@@ -1,5 +1,8 @@
 ## Docs
 
+[![star](https://gitee.com/bbigsun/docs/badge/star.svg?theme=white)](https://gitee.com/bbigsun/docs/stargazers)
+[![fork](https://gitee.com/bbigsun/docs/badge/fork.svg?theme=white)](https://gitee.com/bbigsun/docs/members)
+
 > Docsify 一个神奇的文档网站生成器
 
 > Docs 使用 Docsify 搭建的在线文档。
@@ -169,7 +172,7 @@ window.$docsify = {
 
 <!-- 背景图片 -->
 
-<!-- ![](_media/bg.png) -->
+![](_media/bg.png)
 
 <!-- 背景色 -->
 
@@ -183,10 +186,6 @@ window.$docsify = {
 `index.html`
 
 ```html
-<head>
-    <!-- 搜索插件 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-</head>
 <body>
     <div id="app"></div>
     <script>
@@ -202,6 +201,8 @@ window.$docsify = {
             }
         }
     </script>
+    <!-- 搜索插件 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 <body>
 ```
 
@@ -210,10 +211,6 @@ window.$docsify = {
 `index.html`
 
 ```html
-<head>
-    <!-- 一键复制插件 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-</head>
 <body>
     <div id="app"></div>
     <script>
@@ -228,6 +225,8 @@ window.$docsify = {
             }
         }
     </script>
+    <!-- 一键复制插件 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 <body>
 ```
 
@@ -236,10 +235,10 @@ window.$docsify = {
 `index.html`
 
 ```html
-<head>
+<body>
     <!-- emoji插件 -->
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-</head>
+</body>
 ```
 
 #### 代码高亮
@@ -247,10 +246,10 @@ window.$docsify = {
 `index.html`
 
 ```html
-<head>
+<body>
     <!-- 代码高亮 -->
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
-</head>
+</body>
 ```
 
 #### 字数统计
@@ -258,10 +257,6 @@ window.$docsify = {
 `index.html`
 
 ```html
-<head>
-    <!-- 字数统计 -->
-    <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
-</head>
 <body>
     <div id="app"></div>
     <script>
@@ -285,6 +280,8 @@ window.$docsify = {
             }
         }
     </script>
+    <!-- 字数统计 -->
+    <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 <body>
 ```
 
@@ -293,10 +290,6 @@ window.$docsify = {
 `index.html`
 
 ```html
-<head>
-    <!-- 标签卡插件 -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
-</head>
 <body>
     <div id="app"></div>
     <script>
@@ -313,6 +306,8 @@ window.$docsify = {
             }
         }
     </script>
+    <!-- 标签卡插件 -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
 <body>
 ```
 
@@ -342,19 +337,21 @@ Ciao!
 
 ```html
 <head>
-    <!-- LaTeX插件 -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
-    <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
 </head>
+<body>
+    <!-- LaTeX插件 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+</body>
 ```
 
 #### 高亮引用
 
 ```html
-<head>
+<body>
     <!-- 高亮引用插件 -->
     <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
-</head>
+</body>
 ```
 
 #### 阅读进度条
@@ -362,10 +359,6 @@ Ciao!
 `index.html`
 
 ```html
-<head>
-    <!-- 阅读进度条插件 -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
-</head>
 <body>
     <div id="app"></div>
     <script>
@@ -380,6 +373,8 @@ Ciao!
             }
         }
     </script>
+    <!-- 阅读进度条插件 -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
 <body>
 ```
 
@@ -388,12 +383,12 @@ Ciao!
 `index.html`
 
 ```html
-<head>
+<body>
     <!-- mermaid插件 -->
     <script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
     <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
     <script>mermaid.initialize({ startOnLoad: true });</script>
-</head>
+</body>
 ```
 
 

@@ -1,9 +1,5 @@
 <!-- _coverpage.md -->
 
-<!-- 背景图片 -->
-
-![](_media/bg.png)
-
 
 ![logo](_media/icon.svg)
 
@@ -19,9 +15,11 @@
 [GitHub](https://github.com/docsifyjs/docsify/)
 [Get Started](#Docs)
 
+<!-- 背景图片 -->
 
+![](_media/bg.png)
 
 <!-- 背景色 -->
 
-<!-- ![color](#F5B2B2) -->
+![color](#F5B2B2)
 
