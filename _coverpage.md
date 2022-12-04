@@ -13,7 +13,7 @@
 
 [Gitee](https://gitee.com/bbigsun/docs.git)
 [GitHub](https://github.com/docsifyjs/docsify/)
-[Get Started](#Docs)
+[Get Started](#docs)
 
 <!-- 背景图片 -->
 
@@ -21,5 +21,5 @@
 
 <!-- 背景色 -->
 
-![color](#F5B2B2)
+<!-- ![color](#F5B2B2) -->
 
