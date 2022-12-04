@@ -1,7 +1,7 @@
 <!-- _coverpage.md -->
 
 
-![logo](_media/icon.svg)
+<!-- ![logo](_media/icon.svg) -->
 
 # Docs <small>1.0.0</small>
 
@@ -17,7 +17,7 @@
 
 <!-- 背景图片 -->
 
-![](_media/bg.png)
+<!-- ![](_media/bg.png) -->
 
 <!-- 背景色 -->
 
