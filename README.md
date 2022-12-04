@@ -8,7 +8,7 @@
 > Docs 使用 Docsify 搭建的在线文档。
 
 
-### 高级配置
+### 配置
 
 #### 默认 `index.html` 
 
@@ -103,8 +103,11 @@ window.$docsify = {
 ```markdown
 <!-- _navbar.md -->
 
-* [En](/)
-* [中文](/zh-cn/)
+* [首页](/)
+* Study
+  * [Kubernetes](/k8s/)
+  * [Ansible](/ansible/)
+  * [Python](/python/)
 ```
 
 #### 侧边导航栏
@@ -120,25 +123,28 @@ window.$docsify = {
 `_sidebar.md`
 
 ```markdown
-* [高级配置](#高级配置)
+* [配置](#配置)
 
-    * [默认 index.html](#默认-indexhtml)
-    * [网页标题](#网页标题)
-    * [网页图标](#网页图标)
-    * [文档主题](#文档主题)
-        * [官方主题]()
-        * [其他主题]()
-    * [主题颜色]()
-    * [顶部导航栏]()
-    * [侧边导航栏]()
-    * [封面]()
+  * [默认 index.html](#默认-indexhtml)
+  * [网页标题](#网页标题)
+  * [网页图标](#网页图标)
+  * [文档主题](#文档主题)
+  * [主题颜色](#主题颜色)
+  * [顶部导航栏](#顶部导航栏)
+  * [侧边导航栏](#侧边导航栏)
+  * [封面](#封面)
 
 * [插件](#插件)
-
-    * [搜索]()
-    * [一键复制]()
-    * []()
-    * []()
+  * [搜索](#搜索)
+  * [一键复制](#一键复制)
+  * [emoji](#emoji)
+  * [代码高亮](#代码高亮)
+  * [字数统计](#字数统计)
+  * [标签卡](#标签卡)
+  * [LaTex 公式](#latex-公式)
+  * [高亮引用](#高亮引用)
+  * [阅读进度条](#阅读进度条)
+  * [Mermaid](#mermaid)
 ```
 
 #### 封面
@@ -156,7 +162,8 @@ window.$docsify = {
 ```markdown
 <!-- _coverpage.md -->
 
-![logo](_media/icon.svg)
+
+<!-- ![logo](_media/icon.svg) -->
 
 # Docs <small>1.0.0</small>
 
@@ -168,11 +175,11 @@ window.$docsify = {
 
 [Gitee](https://gitee.com/bbigsun/docs.git)
 [GitHub](https://github.com/docsifyjs/docsify/)
-[Get Started](#Docs)
+[Get Started](#docs)
 
 <!-- 背景图片 -->
 
-![](_media/bg.png)
+<!-- ![](_media/bg.png) -->
 
 <!-- 背景色 -->
 
