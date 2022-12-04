@@ -1,8 +1,9 @@
 ## Docs
 
 > Docsify 一个神奇的文档网站生成器
-> 
+
 > Docs 使用 Docsify 搭建的在线文档。
+
 
 ### 高级配置
 
@@ -398,5 +399,5 @@ Ciao!
 
 ---
 
-> 参考文档：https://blog.pyrroleach.com/index.php/archives/138/
-> 官方文档：https://docsify.js.org/
+> - 参考文档：https://blog.pyrroleach.com/index.php/archives/138/
+> - 官方文档：https://docsify.js.org/
