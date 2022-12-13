@@ -1,8 +1,5 @@
 ## Docs
 
-[![star](https://gitee.com/bbigsun/docs/badge/star.svg?theme=white)](https://gitee.com/bbigsun/docs/stargazers)
-[![fork](https://gitee.com/bbigsun/docs/badge/fork.svg?theme=white)](https://gitee.com/bbigsun/docs/members)
-
 > Docsify 一个神奇的文档网站生成器
 
 > Docs 使用 Docsify 搭建的在线文档。
