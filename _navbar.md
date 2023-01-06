@@ -1,6 +1,6 @@
 <!-- _navbar.md -->
 
-* [首页](/)
+* [🚀 首页](/)
 * 学习
   * [Kubernetes](/k8s/)
   * [Layui](/layui/)

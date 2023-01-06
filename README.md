@@ -1,8 +1,6 @@
 ## Docs
 
-> Docsify 一个神奇的文档网站生成器
-
-> Docs 使用 Docsify 搭建的在线文档。
+?> Docsify 一个神奇的文档网站生成器，Docs 是使用 Docsify 搭建的在线文档。您可以根据以下内容搭建自己的在线文档，欢迎 [![Fork me on Gitee](https://gitee.com/bbigsun/docs/widgets/widget_2.svg?color=c71d23)](https://gitee.com/bbigsun/docs)
 
 
 ### 配置
