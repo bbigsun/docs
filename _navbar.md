@@ -1,10 +1,6 @@
 <!-- _navbar.md -->
 
-* [🚀 首页](/)
-* 学习
-  * [Kubernetes](/k8s/)
-  * [Layui](/layui/)
-  * [Ansible](/ansible/)
-  * [Python](/python/)
-* 项目
-  * [九价助手](/hpv-helper/)
+* [🚀 回到首页](/)
+* [📖 学习了吗](/study/)
+* [✨ 我的作品](/works/)
+* [🎨 给我留言](https://www.bbigsun.com/message-board.html)

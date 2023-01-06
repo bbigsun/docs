@@ -3,7 +3,7 @@
 
 <!-- ![logo](_media/icon.svg) -->
 
-# Docs <small>1.0.0</small>
+# BBigSun's Docs <small>1.0.0</small>
 
 > 纸上得来终觉浅，得知此事要躬行。
 
@@ -12,7 +12,7 @@
 - 三日不读书，便觉面目可憎
 
 [Gitee](https://gitee.com/bbigsun/docs.git)
-[GitHub](https://github.com/docsifyjs/docsify/)
+[GitHub](https://gitee.com/bbigsun/docs.git)
 [Get Started](#docs)
 
 <!-- 背景图片 -->
