@@ -1,5 +1,7 @@
 # Kubernetes
 
+> 当你根据这篇文章将 k8s 完整学习一遍之后，恭喜你！你的 k8s 应该算是入门了，剩下的就要靠你自己去学了。
+
 ## 一、Kubernetes 概述和架构
 
 ### Kubernetes 简介
