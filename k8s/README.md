@@ -12,7 +12,7 @@
 
 如果你已经学过 Linux 和 Docker 相关知识，查看[快速开始](k8s-quickstart.md)，了解 Kubernetes。
 
-如果你想快速搭建一个 k8s 集群用于学习，请查看[k8s 集群部署 | Ubuntu](k8s-install-ubuntu.md)和[k8s 集群部署 | CentOS](k8s-install-centos.md)
+如果你想快速搭建一个 kubernetes 集群用于学习，请查看[kubernetes 集群部署 | Ubuntu](k8s-install-ubuntu.md)和[kubernetes 集群部署 | CentOS](k8s-install-centos.md)
 
 如果你对 Kubernetes 已有了解，希望考取相关证书，请查看 [cka 考证指南](k8s-cka.md) 或者 [cks 考证指南](k8s-cks.md)。
 

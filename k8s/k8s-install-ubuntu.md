@@ -267,7 +267,7 @@ kubectl get node
 ```sh
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
-# ........... 让子弹飞一会儿 ...........
+# ........... 部署需要时间，还请耐心等待 ...........
 
 kubectl get pods -n kube-system
 ```

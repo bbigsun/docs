@@ -1,6 +1,9 @@
-# Kubernetes
+# Kubernetes 快速开始
 
-> 当你根据这篇文章将 k8s 完整学习一遍之后，恭喜你！你的 k8s 应该算是入门了，剩下的就要靠你自己去学了。
+> 当你根据这篇文章将 kubernetes 完整学习一遍之后，恭喜你！你的 kubernetes 应该算是入门了，剩下的就要靠你自己去学了。
+
+本文主要简单介绍一下 kubernetes 的相关概念，然后搭建一个完整的 kubernetes 集群，练习一下常用的 kubernetes 命令，并使用 kubernetes 部署一些简单的项目。
+
 
 ## 一、Kubernetes 概述和架构
 
@@ -60,11 +63,13 @@ Kubernetes，首字母 K，尾字母 s，中间 8 个字母，简称 K8s。
 
 - Kubernetes 架构主要包含两部分：Master（主控节点）和 Work node（工作节点）。
 
-<img src="./images/k8s架构1.png"  >
+![](../_media/k8s-architecture01.png)
 
-<img src="./images/k8s架构2.png"  >
+![](../_media/k8s-architecture02.png)
 
-<img src="images/k8s架构3.png"  >
+![](../_media/k8s-architecture03.png)
+
+
 
 ***Kubernetes 组件***
 
@@ -144,17 +149,7 @@ Kubernetes，首字母 K，尾字母 s，中间 8 个字母，简称 K8s。
 
 ### Kubernetes 工作原理
 
-***Kubernetes 工作图解***
-
----
-
-<img src="./images/k8s原理1.png">
-
-***Kubernetes 工作流程***
-
-1. xxx
-2. xxx
-3. xxx
+![](../_media/k8s-principle01.png)
 
 ## 二、Kubernetes 集群部署
 

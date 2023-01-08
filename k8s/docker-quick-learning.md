@@ -1,17 +1,15 @@
-##  Docker 
+##  简单学下 Docker 
 
 > 为了方便新手小白学习 k8s，所以简单写个教程，仅介绍 k8s 入门所需要掌握的一些 Docker 知识。
 
-## 一、Docker 安装
+### 一、Docker 安装
 
-本人使用的 Linux 操作系统为 CentOS 7.9。
+- 操作系统为 CentOS 7.9。
 
-### 使用包管理工具 yum 安装 Docker
+1、配置 yum 镜像源【阿里云】
 
-```sh
-### dokcer 安装 ###
-# 配置 yum 镜像源【阿里云】
-cat >/etc/yum.repos.d/docker.repo<<EOF
+```bash
+cat >/etc/yum.repos.d/docker.repo << EOF
 [docker-ce-edge]
 name=Docker CE Edge - \$basearch
 baseurl=https://mirrors.aliyun.com/docker-ce/linux/centos/7/\$basearch/edge
@@ -19,62 +17,63 @@ enabled=1
 gpgcheck=1
 gpgkey=https://mirrors.aliyun.com/docker-ce/linux/centos/gpg
 EOF
-# 安装 docker
+```
+
+2、安装 docker
+
+```bash
 yum -y install docker-ce
-# 查看版本
+```
+
+3、查看 docker 版本
+
+```bash
 docker --version
-# 启动 docker
+```
+
+4、启动 docker
+
+```bash
 systemctl start docker
-# 允许 docker 自启
+```
+
+5、允许 docker 自启
+
+```bash
 systemctl enable docker
-# 查看 docker 状态
+```
+
+6、查看 docker 状态
+
+```bash
 systemctl status docker
-# 配置 docker 镜像源【阿里云】
+```
+
+7、配置 docker 镜像源【阿里云】
+
+```bash
 cat >> /etc/docker/daemon.json << EOF
 {
   "registry-mirrors": ["https://b9pmyelo.mirror.aliyuncs.com"]
 }
 EOF
-# 重启 docker，使配置生效
-systemctl restart docker
-
-### dokcer 卸载 ###
-# 查看已安装的 docker 版本
-[root@centos79 ~]# yum list installed | grep docker
-docker-client.x86_64                2:1.13.1-208.git7d71120.el7_9      @extras  
-docker-common.x86_64                2:1.13.1-208.git7d71120.el7_9      @extras  
-# 卸载对应版本的 docker
-[root@centos79 ~]# yum remove -y docer-client.x86_64 docker-common.x86_64 
 ```
 
-### 使用自定义脚本安装 Docker
+8、重启 docker，使配置生效
 
 ```sh
-#!/bin/bash
-
-# docker 部署脚本
-
-cat > /etc/yum.repos.d/docker.repo << EOF
-[docker-ce-edge]
-name=Docker CE Edge - \$basearch
-baseurl=https://mirrors.aliyun.com/docker-ce/linux/centos/7/\$basearch/edge
-enabled=1
-gpgcheck=1
-gpgkey=https://mirrors.aliyun.com/docker-ce/linux/centos/gpg
-EOF
-
-yum -y install docker-ce
-
-systemctl start docker
-systemctl enable docker
-systemctl status docker
+systemctl restart docker
 ```
 
-## 二、Docker 概述
+### 二、Docker 概述
 
-### Docker 简介
+- Docker 官网：[https://www.docker.com](https://www.docker.com/)
 
-Docker 是一个开源的应用容器引擎，基于 [Go 语言](https://www.runoob.com/go/go-tutorial.html) 并遵从 Apache2.0 协议开源。
+- Github Docker 源码：https://github.com/docker/docker-ce
+
+#### Docker 简介
+
+Docker 是一个开源的应用容器引擎，基于 Go 语言并遵从 Apache2.0 协议开源。
 
 Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。
 
@@ -82,13 +81,13 @@ Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级�
 
 Docker 从 17.03 版本之后分为 CE（Community Edition: 社区版） 和 EE（Enterprise Edition: 企业版），我们用社区版就可以了。
 
-### Docker 优点
+#### Docker 优点
 
 - 快速一致的交付您的应用程序
 - 响应式部署和扩展
 - 在同一硬件上运行更多的工作负载
 
-### Docker 架构
+#### Docker 架构
 
 Docker 包含三个基本概念：
 
@@ -96,19 +95,13 @@ Docker 包含三个基本概念：
 - **容器（Container）**：镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的类和实例一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。
 - **仓库（Repository）**：仓库可看成一个代码控制中心，用来保存镜像。
 
-一句话概括三者的关系，即：Docker 使用**仓库**存放**镜像**，使用**镜像**创建**容器**，使用**容器**运行**程序**。
+?> 一句话概括三者的关系，即：Docker 使用**仓库**存放**镜像**，使用**镜像**创建**容器**，使用**容器**运行**程序**。
 
-### Docker 链接
+### 三、Docker 使用
 
-Docker 官网：[https://www.docker.com](https://www.docker.com/)
+?> 参考资料：https://www.runoob.com/docker/docker-tutorial.html
 
-Github Docker 源码：https://github.com/docker/docker-ce
-
-## 三、Docker 使用
-
-详细教程可以查看[Docker 教程 | 菜鸟教程](https://www.runoob.com/docker/docker-tutorial.html)，这里仅列举常用的使用方法。
-
-### Docker Hello World
+#### Docker Hello World
 
 ```sh
 docker run ubuntu /bin/echo "hello world"
@@ -120,7 +113,7 @@ dokcer
 docker images --help
 ```
 
-### Docker image
+#### Docker image
 
 ```sh
 # docker images  查看本地下载的镜像
@@ -156,7 +149,7 @@ docker pull ubuntu:15.10
 docker rmi ubuntu:15.10
 ```
 
-### Docker Container
+#### Docker Container
 
 ```sh
 # docker run 启动容器【使用ubuntu:15.10镜像创建容器】【容器短暂存活】
@@ -211,21 +204,20 @@ cat docker/ubuntu.tar | docker import - test/ubuntu:v1
 docker rm -f <容器 ID>
 ```
 
-### Docker Repository
+#### Docker Repository
 
-Docker 镜像仓库可以通过注册官方镜像仓库 Docker Hub 免费体验使用，由于是国外网站，速度较慢，国内云提供商也提供免费的镜像仓库，注册云账号即可使用。如果这些都不能满足你的需求，可以使用 harbor 自建镜像仓库。
+Docker 镜像仓库可以通过注册官方镜像仓库 Docker Hub 免费体验使用，由于是国外网站，速度较慢，国内云提供商也提供免费的镜像仓库，注册云账号即可使用。
 
-- [官方镜像仓库 Docker Hub](https://registry.hub.docker.com/)
+- [官方镜像仓库](https://registry.hub.docker.com/)
 
-- [阿里云镜像仓库](https://cr.console.aliyun.com) 【推荐使用阿里云的镜像仓库】
+- [阿里云镜像仓库](https://cr.console.aliyun.com) 
 
 - [腾讯云镜像仓库]()
 
 - [华为云镜像仓库]()
 
-- [自建 harbor 镜像仓库]()
 
-### Docker Network
+#### Docker Network
 
 我们使用docker run创建Docker容器时，可以用 --net 选项指定容器的网络模式，Docker 有以下4种网络模式：
 
@@ -234,9 +226,9 @@ Docker 镜像仓库可以通过注册官方镜像仓库 Docker Hub 免费体验�
 - container模式，使用--net=container:NAME_or_ID指定，指定容器与特定容器共享网络命名空间
 - none模式，使用--net=none指定，网络模式为空，即保留网络命名空间，但是不做任何网络相关的配置（网卡、IP、路由等）
 
-### Docker Command
+#### Docker Command
 
-如果以下常用命令，仍不能满足你的日常需求，请查看[Docker 命令大全](https://www.runoob.com/docker/docker-command-manual.html)。
+如果以下常用命令，仍不能满足你的日常需求，请查看 [Docker 命令大全](https://www.runoob.com/docker/docker-command-manual.html)。
 
 ```sh
 # 容器生命周期管理
@@ -291,9 +283,9 @@ docker version
 docker -v
 ```
 
-## 四、Dokcerfile
+### 四、Dokcerfile
 
-### Dockerfile 指令
+#### 常用指令
 
 - FROM：构建镜像基于哪个镜像
 
@@ -322,138 +314,3 @@ docker -v
 - COPY：拷贝文件或目录到容器中，跟ADD类似，但不具备自动下载或解压的功能
 
 - ENTRYPOINT：运行容器时执行的shell命令
-
-### Dockerfile 实例一：使用 Docker 构建 LNMP 环境
-
-```dockerfile
-FROM nginx
-RUN 
-WORKDIR /data/lnmp/nginx
-EXPOSE 80
-CMD
-
-FROM php
-RUN
-WORKDIR /data/lnmp/php
-EXPOSE 9000
-CMD
-```
-
-使用脚本创建容器
-
-```sh
-#/bin/bash
-function mysql() {
-	docker run --name mysql-lnmp --restart=always --net lnmp -p 3306:3306 \
-	-v /data/mysql/data:/var/lib/mysql \
-	-v /data/mysql/conf:/etc/mysql/conf.d/ \
-	-v /data/mysql/logs:logs \
-	-e MYSQL_ROOT_PASSWORD=123456
-	-d mysql --character-set-server=utf8
-}
-
-function nginx() {
-	docker run --name nginx-lnmp --restart=always --net lnmp -p 80:80 \
-	-v /data/nginx/html:/data/nginx/html \
-	-v /data/nginx/logs:/data/nginx/logs \
-	-d nginx 
-}
-
-function php() {
-	docker run --name php-lnmp --restart=always --net lnmp -p 9000:9000 \
-	-v /data/php/log:/data/php/log \
-	-d php
-}
-
-$1
-```
-
-### Dockerfile 实例二：使用 Docker 构建 Django 环境
-
-【Django项目介绍】
-
-- 项目地址：https://gitee.com/agagin/python-demo.git （`./python-demo-master.zip` 含 `dockerfile`）
-- Python3 + Django + uwsgi + nginx + mysql
-- 内部服务端口 8002
-
-【构建命令】
-
-```sh
-docker build . -t ImageName:ImageTag -f Dockerfile
-```
-
-【Dockerfile】
-
-```dockerfile
-# dockerfiles/myblog/Dockerfile
-# version 1.0
-
-# Base images 基础镜像
-FROM centos:centos7.5.1804
-
-# MAINTAINER 维护者信息
-LABEL maintainer="123456@qq.com"
-
-# ENV 设置环境变量
-ENV LANG en_US.UTF-8
-ENV LC_ALL en_US.UTF-8
-
-# RUN 执行以下命令
-RUN curl -so /etc/yum.repos.d/centos-7.repo http://mirrors.aliyun.com/repo/Centos-7.repo && rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
-RUN yum install -y python36 python3-devel gcc pcre-devel zlib-devel make net-tools nginx
-
-# 工作目录
-WORKDIR /opt/myblog
-
-# 拷贝文件至工作目录
-COPY . .
-
-# 拷贝nginx配置文件
-COPY myblog.conf /etc/nginx
-
-# 安装依赖的插件
-RUN pip3 install -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com -r requirements.txt
-
-RUN chmod +x run.sh && rm -rf ~/.cache/pip
-
-# EXPOSE 映射端口
-EXPOSE 8002
-
-# 容器启动时执行命令
-CMD ["./run.sh"]
-```
-
-执行构建：
-
-```sh
-docker build . -t myblog:v1 -f Dockerfile
-```
-
-创建网络：（若不指定网络，需要进入mysql容器中，通过ifconfig命令查看mysql容器ip）
-
-```sh
-docker network create --subnet=172.18.0.0/16 mynet
-```
-
-运行mysql：
-
-```sh
-docker run -d -p 3306:3306 --name mysql -v /opt/mysql:/var/lib/mysql --net mynet --ip 172.18.0.2 -e MYSQL_DATABASE=myblog -e MYSQL_ROOT_PASSWORD=123456 mysql:5.7
-```
-
-启动应用：
-
-```sh
-docker run -d -p 8002:8002 --name myblog --net mynet --ip 172.18.0.3 -e MYSQL_HOST=172.18.0.2 -e MYSQL_USER=root -e MYSQL_PASSWD=123456 myblog:v1
-```
-
-数据迁移：
-
-```sh
-docker exec -it myblog bash
-
-python3 manage.py makemigrations
-python3 manage.py migrate
-python3 manage.py createsuperuser
-```
-
