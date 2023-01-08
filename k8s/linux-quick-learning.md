@@ -4,7 +4,7 @@
 
 ?> 参考资料：https://www.runoob.com/linux/linux-tutorial.html
 
-### Linux 系统介绍
+### 一、Linux 系统介绍
 
 大体上来讲，Linux分为两个生态体系，红帽和 debian。商业版本以 Redhat 为代表，开源社区版本则以 debian 为代表。
 
@@ -26,14 +26,14 @@
 
 *PS：小白可以记住这三个系统，工作使用 CentOS（免费），日常使用 Ubuntu（有桌面），特殊用途 Kali（黑客）*
 
-### Linux 系统安装
+### 二、Linux 系统安装
 
 学习 Linux，首先我们需要一个 Linux 系统。
 
 - 👉 [CentOS 系统安装](linux-install-centos.md)
 - 👉 [Ubuntu 系统安装](linux-install-ubuntu.md)
 
-### Linux 目录介绍
+### 三、Linux 目录介绍
 
 ```bash
 [root@localhost ~]# ls /
@@ -69,7 +69,7 @@ bin  boot  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  
 
 
 
-### Linux 常用命令介绍
+### 四、Linux 常用命令介绍
 
 
 
@@ -267,8 +267,6 @@ hello linux
 ```bash
 [root@localhost home]# yum -y install vim
 ```
-
-
 
 
 

@@ -1,8 +1,8 @@
 # Kubernetes 快速开始
 
-> 当你根据这篇文章将 kubernetes 完整学习一遍之后，恭喜你！你的 kubernetes 应该算是入门了，剩下的就要靠你自己去学了。
+> 本文主要简单介绍一下 kubernetes 的相关概念，然后搭建一个完整的 kubernetes 集群，练习一下常用的 kubernetes 命令，并使用 kubernetes 部署一些简单的项目。
 
-本文主要简单介绍一下 kubernetes 的相关概念，然后搭建一个完整的 kubernetes 集群，练习一下常用的 kubernetes 命令，并使用 kubernetes 部署一些简单的项目。
+?> 当你根据这篇文章将 kubernetes 完整学习一遍之后，恭喜你！你的 kubernetes 应该算是入门了，剩下的就要靠你自己去学了。
 
 
 ## 一、Kubernetes 概述和架构

@@ -2,6 +2,8 @@
 
 > 为了方便新手小白学习 k8s，所以简单写个教程，仅介绍 k8s 入门所需要掌握的一些 Docker 知识。
 
+?> 参考资料：https://www.runoob.com/docker/docker-tutorial.html
+
 ### 一、Docker 安装
 
 - 操作系统为 CentOS 7.9。
