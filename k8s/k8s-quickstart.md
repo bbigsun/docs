@@ -187,7 +187,7 @@ kubeadm join < Master 节点的 IP 和端口 >
 
 #### *准备虚拟机*
 
-如果不会创建虚拟机，可以查看 [如何创建虚拟机？](pre-linux.md)
+如果不会创建虚拟机，可以查看 [安装 CentOS 系统](linux-install-centos.md)  这篇文章。
 
 | 主机名称   | 节点类型 | IP             | 配置      |
 | ---------- | -------- | -------------- | --------- |
@@ -205,9 +205,9 @@ hostnamectl set-hostname k8snode2
 
 # 在三台虚拟机上配置本地 hosts
 cat >> /etc/hosts << EOF
-192.168.60.151 k8smaster1.example.com
-192.168.60.152 k8snode1.example.com
-192.168.60.153 k8snode2.example.com
+192.168.60.151 k8smaster1
+192.168.60.152 k8snode1
+192.168.60.153 k8snode2
 EOF
 ```
 
@@ -393,7 +393,7 @@ kubeadm join 192.168.60.151:6443 --token 8j6ui9.gyr4i156u30y80xf     --discovery
 
 ```sh
 # 使用 nginx 镜像创建一个 pod
-kubectl create deployment nginx --image=nginx、
+kubectl create deployment nginx --image=nginx
 
 # 查看 pod 状态，如果出现 Running 状态的时候，表示已经成功运行了
 kubectl get pod
@@ -603,7 +603,7 @@ echo “1” > /proc/sys/net/ipv4/ip_forward
 
 #### *准备虚拟机*
 
-如果不会创建虚拟机，可以查看 [如何创建虚拟机？](pre-linux.md)
+如果不会创建虚拟机，可以查看 [安装 CentOS 系统](linux-install-centos.md)  这篇文章。
 
 | 主机名称   | 节点类型 | IP             | 配置      |
 | ---------- | -------- | -------------- | --------- |
@@ -621,9 +621,9 @@ hostnamectl set-hostname k8snode2
 
 # 在三台虚拟机上配置本地 hosts
 cat >> /etc/hosts << EOF
-192.168.60.151 k8smaster1.example.com
-192.168.60.152 k8snode1.example.com
-192.168.60.153 k8snode2.example.com
+192.168.60.151 k8smaster1
+192.168.60.152 k8snode1
+192.168.60.153 k8snode2
 EOF
 ```
 
@@ -1593,10 +1593,7 @@ systemctl status kube-proxy
 下载 CNI 网络插件：
 
 ```sh
-# 原地址
 wget https://github.com/containernetworking/plugins/releases/download/v0.8.6/cni-plugins-linux-amd64-v0.8.6.tgz
-# 码云地址【个人上传】【推荐】【速度较快】
-wget https://gitee.com/bbigsun/kubernetes-study/raw/master/TLS/k8s/cni-plugins-linux-amd64-v0.8.6.tgz
 ```
 
 安装插件：
@@ -1756,7 +1753,7 @@ kubectl create --help
 
 ### Kubernetes 集群 YAML 文件详解
 
-参考资料：[YAML 入门教程 | 菜鸟教程](https://www.runoob.com/w3cnote/yaml-intro.html)
+?> 参考资料：[YAML 入门教程 | 菜鸟教程](https://www.runoob.com/w3cnote/yaml-intro.html)
 
 #### YAML 概述
 
@@ -2085,7 +2082,7 @@ service/web1         NodePort    10.111.61.143   <none>        80:30344/TCP   6s
 
 然后我们访问对应的 url，即可看到 nginx 了 `http://192.168.60.151:30344/`
 
-<img src="./images/nginx.png" style="zoom:150%;" >
+![](../_media/k8s-nginx.png)
 
 ####  升级回滚和弹性收缩
 
@@ -2559,7 +2556,7 @@ root@cm-pod-test004:/usr/local/tomcat# ls /conf
 - 访问过程中，需要证书、token、或者用户名和密码
 - 如果访问 pod 需要 serviceAccount
 
-<img src="./images/api-server.png">
+![](../_media/k8s-api-server.png)
 
 **1、认证**
 

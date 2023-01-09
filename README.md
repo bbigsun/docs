@@ -2,8 +2,9 @@
 
 > [Docsify](https://github.com/docsifyjs/docsify/) 一个神奇的文档网站生成器，Docs 是使用 Docsify 搭建的在线文档。
 
-?> 您可以根据以下内容搭建自己的在线文档，欢迎fork 👉[BBigSun/Docs](https://gitee.com/bbigsun/docs)。
+?> 以下内容为本网站的搭建过程，欢迎fork 👉[BBigSun/Docs](https://gitee.com/bbigsun/docs)。如果您想搭建自己的在线文档，可以参考 👉 [BBigSun / Docsify Template](https://bbigsun.gitee.io/docsify-template)
 
+!> 使用作者的文章，或修改作者文章，请注明出处，感谢配合。
 
 ### 配置
 
